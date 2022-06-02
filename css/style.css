@@ -1,0 +1,34 @@
+:root {
+    --deskLeft: 50%;
+    --deskTop: 470px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.game {
+    width: 700px;
+    height: 500px;
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    position: relative;
+}
+
+.desk {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: aqua;
+    left: var(--deskLeft);
+    top: var(--deskTop);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
