@@ -1,6 +1,8 @@
 :root {
     --deskLeft: 50%;
     --deskTop: 470px;
+    --ballLeft: 250px;
+    --ballTop: 200px;
 }
 
 body {
@@ -8,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: rgb(31, 90, 31);
 }
 
 .game {
@@ -31,4 +33,75 @@ body {
     top: var(--deskTop);
     transform: translateX(-50%);
     pointer-events: none;
+}
+
+.walls {
+    border: 1px solid yellow;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.wall {
+    width: 50px;
+    height: 10px;
+    background-color: greenyellow;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.wall:nth-child(8n) {
+    margin-right: 0px;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    left: var(--ballLeft);
+    top: var(--ballTop);
+    background-color: blue;
+}
+
+.top-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border: 2px solid blue;
+}
+
+.left-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.right-wall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.bottom-wall {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border: 2px solid blue;
 }
